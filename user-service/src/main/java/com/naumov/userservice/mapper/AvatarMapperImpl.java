@@ -11,10 +11,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Component
 @AllArgsConstructor
-@PropertySource(value = "classpath:/file.properties")
 public class AvatarMapperImpl implements AvatarMapper{
-    @Value(value = "{file.path}")
-    private final String filePath;
+
+    private final String filePath = "/target/";
 
     private final FileUtil fileUtil;
 
