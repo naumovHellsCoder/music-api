@@ -6,5 +6,8 @@ spring:
     password: postgres
     url: "jdbc:postgresql://localhost:5432/user_service"
     driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
 server:
   port: 8081
