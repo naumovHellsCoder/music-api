@@ -4,6 +4,14 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: resource
+          uri: http://127.0.0.1:8084
+          predicates:
+            - Path=/resource
+          filters:
+            - TokenRelay=
+            - RemoveRequestHeader=Cookie
+
   security:
     oauth2:
       client:
@@ -19,4 +27,4 @@ spring:
           spring:
             issuer-uri: http://localhost:9000
 server:
-  port: 8082
+  port: 9000
