@@ -2,4 +2,4 @@ spring:
   application:
     name: music-service
 server:
-  port: 8084
+  port: 8082

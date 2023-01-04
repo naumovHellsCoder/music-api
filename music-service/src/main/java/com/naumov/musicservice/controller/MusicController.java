@@ -10,6 +10,7 @@ public class MusicController {
     @GetMapping(path = "/")
     @ResponseStatus(HttpStatus.OK)
     public String test(){
+
         return "test is authenticated";
     }
 
